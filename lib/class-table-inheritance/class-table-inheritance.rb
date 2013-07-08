@@ -1,4 +1,3 @@
-
 # ClassTableInheritance is an ActiveRecord plugin designed to allow 
 # simple multiple table (class) inheritance.
 class ActiveRecord::Base  
@@ -48,7 +47,7 @@ class ActiveRecord::Base
 
     # set the primary key, it' need because the generalized table doesn't have
     # a field ID.
-    set_primary_key "#{association_id}_id"
+    self.primary_key = "#{association_id}_id"
 
 
     # Autobuild method to make a instance of association
